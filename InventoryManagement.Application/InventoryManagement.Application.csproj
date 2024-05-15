@@ -6,4 +6,16 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\InventoryManagement.DataAccess\InventoryManagement.DataAccess.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Scenarios\GetIngredient\" />
+  </ItemGroup>
+
 </Project>

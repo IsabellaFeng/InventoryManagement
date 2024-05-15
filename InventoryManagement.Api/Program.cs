@@ -1,4 +1,4 @@
-using InventoryManagement.DataAccess;
+using InventoryManagement.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,8 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddInventoryEF(connectionString);
+builder.Services.AddApplication(builder.Configuration);
 
 builder.Services.AddCors(options =>
 {
@@ -31,6 +30,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("OpenCorsPolicy");
 
 app.UseAuthorization();
 

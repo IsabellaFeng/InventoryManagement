@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 using InventoryManagement.DataAccess.Data;
 using InventoryManagement.DataAccess.Entities;
+using MediatR;
+using InventoryManagement.Application.Scenarios.CreateIngredient;
 
 namespace InventoryManagement.Api.Controllers
 {
@@ -13,20 +15,20 @@ namespace InventoryManagement.Api.Controllers
     public class InventoryController : ControllerBase
     {
         private readonly IDbContextFactory<InventoryDbContext> _dbContextFactory;
+        private readonly IMediator _mediator;
 
-        public InventoryController(IDbContextFactory<InventoryDbContext> dbContextFactory)
+        public InventoryController(IDbContextFactory<InventoryDbContext> dbContextFactory, IMediator mediator)
         {
             _dbContextFactory = dbContextFactory;
+            _mediator = mediator;
         }
 
         [HttpPut("Ingredients")]
-        public async Task<IActionResult> AddIngredient([FromBody] Ingredient ingredient)
+        public async Task<IActionResult> AddIngredient([FromBody] CreateIngredientRequest request)
         {
-            var dbContext = await _dbContextFactory.CreateDbContextAsync();
-            dbContext.Ingredients.Add(ingredient);
-            await dbContext.SaveChangesAsync();
+            var id = await _mediator.Send(request);
 
-            return Ok(ingredient.IngredientId);
+            return Ok(id);
         }
 
         [HttpGet("Ingredients")]
