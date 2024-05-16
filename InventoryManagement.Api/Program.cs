@@ -38,3 +38,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+// for WebApplicationFactory<Program> in tests to correctly reference this Program class.
+public partial class Program { }

@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManagement.Api", "InventoryManagement.Api\InventoryManagement.Api.csproj", "{F86F6EE5-E781-4D9A-B785-9BFAC0D998C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryManagement.Api", "InventoryManagement.Api\InventoryManagement.Api.csproj", "{F86F6EE5-E781-4D9A-B785-9BFAC0D998C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManagement.Application", "InventoryManagement.Application\InventoryManagement.Application.csproj", "{D7C4AEAD-67EB-4920-A1F1-42FAB65FFEBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryManagement.Application", "InventoryManagement.Application\InventoryManagement.Application.csproj", "{D7C4AEAD-67EB-4920-A1F1-42FAB65FFEBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManagement.DataAccess", "InventoryManagement.DataAccess\InventoryManagement.DataAccess.csproj", "{5E70F83C-DF1D-4B57-9F03-DB89E79BA53B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryManagement.DataAccess", "InventoryManagement.DataAccess\InventoryManagement.DataAccess.csproj", "{5E70F83C-DF1D-4B57-9F03-DB89E79BA53B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManagement.Tests", "InventoryManagement.Tests\InventoryManagement.Tests.csproj", "{9AB8F9D6-9498-4201-BCC0-BF90347B139E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{5E70F83C-DF1D-4B57-9F03-DB89E79BA53B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E70F83C-DF1D-4B57-9F03-DB89E79BA53B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E70F83C-DF1D-4B57-9F03-DB89E79BA53B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AB8F9D6-9498-4201-BCC0-BF90347B139E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AB8F9D6-9498-4201-BCC0-BF90347B139E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AB8F9D6-9498-4201-BCC0-BF90347B139E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AB8F9D6-9498-4201-BCC0-BF90347B139E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

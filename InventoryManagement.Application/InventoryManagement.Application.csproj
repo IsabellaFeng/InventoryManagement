@@ -14,8 +14,4 @@
     <ProjectReference Include="..\InventoryManagement.DataAccess\InventoryManagement.DataAccess.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Scenarios\GetIngredient\" />
-  </ItemGroup>
-
 </Project>

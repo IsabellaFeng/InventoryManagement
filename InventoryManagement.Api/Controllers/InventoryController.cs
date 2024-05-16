@@ -6,6 +6,7 @@ using InventoryManagement.DataAccess.Data;
 using InventoryManagement.DataAccess.Entities;
 using MediatR;
 using InventoryManagement.Application.Scenarios.CreateIngredient;
+using InventoryManagement.Application.Scenarios.GetIngredient;
 
 namespace InventoryManagement.Api.Controllers
 {
@@ -34,8 +35,7 @@ namespace InventoryManagement.Api.Controllers
         [HttpGet("Ingredients")]
         public async Task<IActionResult> GetIngredients()
         {
-            var dbContext = await _dbContextFactory.CreateDbContextAsync();
-            var ingredients = await dbContext.Ingredients.ToListAsync();
+            var ingredients = await _mediator.Send(new GetIngredientsRequest());
             return Ok(ingredients);
         }
 
